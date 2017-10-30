@@ -1,4 +1,4 @@
-#Módulos de PHP do curso Udemy
+#php-udemy
 
 Esse repositório apresenta os códigos desenvolvidos no curso de Desenvolvedor Web do Udemy.
 O curso está disponível no link:
