@@ -1,3 +1,7 @@
+<?php
+  $fumante = false;
+
+?>
 <!doctype html>
 <html>
     <head>
@@ -7,10 +11,8 @@
 
     <body>
       <?php
-        $salada = array("Maçã", "Abacate", "Laranja");
-
-        echo "Existe o Uva nesse array?? " . array_search("Uva", $salada) . "<br>";
-        pgp
+          echo "Você fuma? " . $fumante . "<br>";
+          echo "Variável é booleana " . is_bool($fumante);
       ?>
     </body>
 </html>
