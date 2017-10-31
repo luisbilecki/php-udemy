@@ -26,7 +26,7 @@
         <main>
             <?php  while($linha = mysqli_fetch_assoc($resultado)){ ?>
                 <ul>
-                    <li><?php echo $linha["imagempequena"] ?></li>
+                    <li><img src=<?php echo $linha["imagempequena"] ?>/></li>
                     <li><?php echo $linha["nomeproduto"] ?></li>
                     <li>Tempo de entrega: <?php echo $linha["tempoentrega"] ?></li>
                     <li>Preço unitário: <?php echo $linha["precounitario"] ?></li>
