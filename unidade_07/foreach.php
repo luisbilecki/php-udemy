@@ -8,14 +8,11 @@
 </head>
 <body>
     <?php
-      $contador = 1;
+        $salada = array("Maçã", "Abacate", "Laranja", "Banana", "Uva");
 
-      while ( $contador <= 10 ) {
-        $sorteio = rand(1,60);
-        echo $sorteio . " ";
-        $contador++;
-      }
-
+        foreach ($salada as $fruta) {
+            echo "A fruta da vez é $fruta<br>";
+        }
     ?>
 </body>
 </html>

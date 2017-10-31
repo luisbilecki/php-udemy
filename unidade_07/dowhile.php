@@ -10,11 +10,11 @@
     <?php
       $contador = 1;
 
-      while ( $contador <= 10 ) {
+      do {
         $sorteio = rand(1,60);
         echo $sorteio . " ";
         $contador++;
-      }
+      } while( $contador <= 5 )
 
     ?>
 </body>
