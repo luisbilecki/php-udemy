@@ -3,6 +3,10 @@
 <?php
     //Iniciar sessão
     session_start();
+    if ( !isset($_SESSION["user_portal"]) )
+    {
+        header("location:login.php");
+    }
 
     // Determinar localidade BR
     setlocale(LC_ALL, 'pt_BR');
@@ -44,11 +48,6 @@
 
             <div id="listagem_produtos">
             <?php
-                if ( isset($_SESSION["user_portal"]) )
-                {
-                    echo $_SESSION["user_portal"];
-                }
-
                 while($linha = mysqli_fetch_assoc($resultado)) {
             ?>
                 <ul>

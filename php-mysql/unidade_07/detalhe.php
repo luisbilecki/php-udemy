@@ -1,9 +1,17 @@
 <?php require_once("../conexao/conexao.php"); ?>
 <?php
+    //Iniciar sessão
+    session_start();
+    if ( !isset($_SESSION["user_portal"]) )
+    {
+        header("location: login.php");
+        return;
+    }
+
     if ( isset($_GET["codigo"]) ) {
         $produto_id = $_GET["codigo"];
     } else {
-        Header("Location: inicial.php");
+        Header("location: inicial.php");
     }
 
     // Consulta ao banco de dados

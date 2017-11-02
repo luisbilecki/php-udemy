@@ -23,6 +23,7 @@
             $mensagem = "Login sem sucesso.";
         }else{
             $_SESSION["user_portal"] = $informacao["clienteID"];
+            $_SESSION["nomecompleto"] = $informacao["nomecompleto"];
             header("location: listagem.php");
         }
     }
