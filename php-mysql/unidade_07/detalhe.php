@@ -1,4 +1,4 @@
-<?php require_once("../../conexao/conexao.php"); ?>
+<?php require_once("../conexao/conexao.php"); ?>
 <?php
     if ( isset($_GET["codigo"]) ) {
         $produto_id = $_GET["codigo"];
@@ -33,7 +33,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Curso PHP FUNDAMENTAL</title>
-        
+
         <!-- estilo -->
         <link href="_css/estilo.css" rel="stylesheet">
         <link href="_css/produto_detalhe.css" rel="stylesheet">
@@ -41,8 +41,8 @@
 
     <body>
         <?php include_once("_incluir/topo.php"); ?>
-        
-        <main>  
+
+        <main>
             <div id="detalhe_produto">
                 <ul>
                     <li class="imagem"><img src="<?php echo $imagemgrande ?>"></li>
@@ -54,7 +54,7 @@
                     <li><b>Pre&ccedil;o Unit&aacute;rio: </b><?php echo "R$ " . number_format($precounitario,2,",",".") ?></li>
                     <li><b>Estoque: </b><?php echo $estoque ?></li>
                 </ul>
-               
+
             </div>
         </main>
 

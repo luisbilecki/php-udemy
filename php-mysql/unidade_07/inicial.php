@@ -1,11 +1,11 @@
-<?php require_once("../../conexao/conexao.php"); ?>
+<?php require_once("../conexao/conexao.php"); ?>
 
 <!doctype html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Curso PHP FUNDAMENTAL</title>
-        
+
         <!-- estilo -->
         <link href="_css/estilo.css" rel="stylesheet">
     </head>
@@ -17,9 +17,9 @@
                 <img src="assets/text_bnwcoffee.gif">
             </div>
         </header>
-        
-        <main>  
-            
+
+        <main>
+
         </main>
 
         <footer>

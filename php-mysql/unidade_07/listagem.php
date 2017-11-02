@@ -1,6 +1,9 @@
-<?php require_once("../../conexao/conexao.php"); ?>
+<?php require_once("../conexao/conexao.php"); ?>
 
 <?php
+    //Iniciar sessão
+    session_start();
+
     // Determinar localidade BR
     setlocale(LC_ALL, 'pt_BR');
 
@@ -13,7 +16,7 @@
     }
     $resultado = mysqli_query($conecta, $produtos);
     if(!$resultado) {
-        die("Falha na consulta ao banco");   
+        die("Falha na consulta ao banco");
     }
 ?>
 <!doctype html>
@@ -21,7 +24,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Curso PHP FUNDAMENTAL</title>
-        
+
         <!-- estilo -->
         <link href="_css/estilo.css" rel="stylesheet">
         <link href="_css/produtos.css" rel="stylesheet">
@@ -30,7 +33,7 @@
 
     <body>
         <?php include_once("_incluir/topo.php"); ?>
-        
+
         <main>
             <div id="janela_pesquisa">
                 <form action="listagem.php" method="get">
@@ -38,9 +41,14 @@
                     <input type="image"  src="assets/botao_search.png">
                 </form>
             </div>
-            
-            <div id="listagem_produtos"> 
+
+            <div id="listagem_produtos">
             <?php
+                if ( isset($_SESSION["user_portal"]) )
+                {
+                    echo $_SESSION["user_portal"];
+                }
+
                 while($linha = mysqli_fetch_assoc($resultado)) {
             ?>
                 <ul>
@@ -55,12 +63,12 @@
                 </ul>
              <?php
                 }
-            ?>           
+            ?>
             </div>
-            
+
         </main>
 
-        <?php include_once("_incluir/rodape.php"); ?>  
+        <?php include_once("_incluir/rodape.php"); ?>
     </body>
 </html>
 

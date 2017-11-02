@@ -1,10 +1,17 @@
-<?php require_once("../../conexao/conexao.php"); ?>
+<?php require_once("../conexao/conexao.php"); ?>
+<?php
+    //iniciar sessão
+    session_start();
+
+    //Criar variável de sessão
+    $_SESSION["usuario"] = "Victor";
+?>
 <!doctype html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Curso PHP FUNDAMENTAL</title>
-        
+
         <!-- estilo -->
         <link href="_css/estilo.css" rel="stylesheet">
     </head>
@@ -16,9 +23,16 @@
                 <img src="assets/text_bnwcoffee.gif">
             </div>
         </header>
-        
+
         <main>
 
+            <?php
+                if (isset($_SESSION["usuario"]))
+                    echo $_SESSION["usuario"];
+            ?><p>
+                <a href="pagina2.php">Página 2</a>
+                <a href="logout.php">Sair</a>
+            </p>
         </main>
 
         <footer>
