@@ -36,9 +36,8 @@ main div#janela_formulario form input[type="text"] {
 }
 
 main div#janela_formulario form select {
-    width:280px;
-    height: 20px;
-    padding:20px;
+    width:302px;
+    padding:10px;
     border:1px solid #CDC99B;
     border-radius: 5px;
     outline: none;
